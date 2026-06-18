@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fchat"
+version = "1.0.0"
+description = "Two-stage curriculum training pipeline for the F-Chat clinical reasoning model"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "torch>=2.1.0",
+    "transformers>=4.38.0",
+    "datasets>=2.18.0",
+    "peft>=0.10.0",
+    "accelerate>=0.28.0",
+    "auto-gptq>=0.7.1",
+    "optimum>=1.18.0",
+    "sentencepiece>=0.2.0",
+    "huggingface-hub>=0.21.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
